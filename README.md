@@ -3,6 +3,7 @@ This is a simple password generator project created using HTML, CSS, and JavaScr
 
 Check Out:- https://rutiktorambe.github.io/Password-Generator
 
+
 ## Features  - Generates random passwords 
 - Allows customization of password length
 - Allows customization of password with uppercase and lowercase letters, numbers, and special characters.
