@@ -2,7 +2,7 @@
 This is a simple password generator project created using HTML, CSS, and JavaScript. It generates random passwords of a specified length, combining letters (both uppercase and lowercase), numbers, and special characters. 
 
 
-## This is a [demo link](https://rutiktorambe.github.io/Password-Generator).
+## 🔗➡ [demo](https://rutiktorambe.github.io/Password-Generator)
 
 
 
