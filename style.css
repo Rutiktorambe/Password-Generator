@@ -1,61 +1,44 @@
-:root {
-    --dk-violet: hsl(268, 75%, 9%);
-    --lt-violet: hsl(268, 47%, 21%);
-    --lt-violet2: hsl(281, 89%, 26%);
-    --vb-violet: hsl(285, 91%, 52%);
-    --vb-violet2: hsl(290, 70%, 36%);
-    --vb-yellow: hsl(52, 100%, 62%);
-    --pl-white: hsl(0, 0%, 100%);
-    --vb-cyan: hsl(176, 100%, 44%);
-    --vb-cyan2: hsl(177, 92%, 70%);
-    --dk-text: hsl(198, 20%, 13%);
-}
-
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'League Spartan', sans-serif;
 }
 
-html{
+html {
     font-size: 62.5%;
 }
 
-body{
+body {
     font-size: 1.6rem;
-    background: linear-gradient(231deg, rgba(22, 6, 40, 1) 0%,
-    rgba(52, 28, 79, 1) 50%, 
-    rgba(88, 7, 125, 1) 100%);
+    background-image: linear-gradient(to right bottom, #ed3da1, #ca6fde, #8e96ff, #43b3ff, #00c9ff, #00c9ff, #00c9ff, #00c9ff, #43b3ff, #8e96ff, #ca6fde, #ed3da1);
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
 /* wrapper */
-.wrapper{
+.wrapper {
     width: 100vw;
     min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(231deg, rgba(22, 6, 40, 1) 0%,
-     rgba(52, 28, 79, 1) 50%, 
-     rgba(88, 7, 125, 1) 100%);
+    background: transparent;
 }
 
-.container{
+.container {
     width: 90%;
     max-width: 45rem;
 }
 
-.app-name{
-    font-size: 3.2rem;
-    font-weight: 600;
-    color: var(--pl-white);
-    opacity: 0.75;
+.app-name {
+    font-size: 3.7rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-shadow: 2px 2px #ed3da1;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: center;
@@ -63,55 +46,53 @@ a{
 }
 
 /* display container */
-.display-container{
+.display-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--dk-violet);
+    background-image: linear-gradient(to right bottom, #ed3da1, #ca6fde, #8e96ff, #43b3ff, #00c9ff, #00c9ff, #00c9ff, #00c9ff, #43b3ff, #8e96ff, #ca6fde, #ed3da1);
     padding: 2.5rem 2.5rem 2rem;
+    border: 1px solid black;
     border-radius: 1.6rem;
-    border-bottom: 0.5rem solid var(--lt-violet2);
+    border-bottom: 0.5rem solid #4e32a0;
     margin: 1.6rem 0;
 }
 
-input.display{
+input.display {
     width: 100%;
     font-size: 2.4rem;
-    font-weight: 600;
-    color: var(--vb-yellow);
+    font-weight: 700;
+    color:#000;
     background: transparent;
-    /* line-height: 3rem; */
-    letter-spacing: 1px;
     border: none;
     outline: none;
 }
 
-input.display::placeholder{
-    color: var(--vb-yellow);
+input.display::placeholder {
+    color:#000;
     text-transform: uppercase;
-    opacity: 0.65;
+    opacity: 0.87;
 }
 
-button.copy-btn{
+button.copy-btn {
     border: none;
     outline: none;
     background: transparent;
-    /* all: unset; */
     cursor: pointer;
     position: relative;
 }
 
-button.copy-btn .copy-img{
+button.copy-btn .copy-img {
     width: 2.4rem;
     height: 2.4rem;
 }
 
-button.copy-btn .copy-tooltip{
+button.copy-btn .copy-tooltip {
     position: absolute;
     top: -3.7rem;
     left: -3rem;
-    color: var(--vb-yellow);
-    background-color: var(--vb-violet2);
+    color: #ff0090;
+    background-color: #d8d6d9;
     font-size: 2rem;
     padding: 0.5rem 1rem;
     border-radius: 1.6rem;
@@ -121,42 +102,45 @@ button.copy-btn .copy-tooltip{
     transform: scale(0);
 }
 
-button.copy-btn .copy-tooltip.active{
+button.copy-btn .copy-tooltip.active {
     opacity: 1;
     transform: scale(1);
 }
 
 /* input container */
-.input-container{
+.input-container {
     padding: 3.2rem;
-    color: var(--pl-white);
-    background-color: var(--dk-violet);
-    border-bottom: 0.5rem solid var(--lt-violet2);
-    border-radius: 1.6rem;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     gap: 2.8rem;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    background-color:transparent;
+    border: 1px solid black;
+    border-bottom: 0.5rem solid #4e32a0;
+    border-radius: 1.6rem;
 }
 
 /* length container */
-.length-container{
+.length-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.length-container p:first-child{
+.length-container p:first-child {
     font-size: 2.4rem;
 }
 
-.length-container p:last-child{
+.length-container p:last-child {
     font-size: 2.4rem;
     font-weight: 600;
-    color: var(--vb-yellow);
+    color:#ff0090;
 }
 
 /* slider */
-.slider{
+.slider {
     appearance: none;
     width: 100%;
     height: 1.2rem;
@@ -164,39 +148,30 @@ button.copy-btn .copy-tooltip.active{
     border: none;
     outline: none;
     cursor: pointer;
-    background: var(--lt-violet);
-    background-image: linear-gradient(var(--vb-violet), var(--vb-violet));
+    background-image: linear-gradient(to right bottom, #ed3da1, #ed3da1);
     background-repeat: no-repeat;
-    /* background-size: 50%; */
     position: relative;
     z-index: 1;
 }
 
-/* 
-.slider:focus{
-    outline: 0.3rem solid var(--vb-yellow);
-    border: 0.3rem solid var(--vb-yellow);
-} */
-
-.slider::-webkit-slider-thumb{
+.slider::-webkit-slider-thumb {
     appearance: none;
     width: 3.2rem;
     height: 3.2rem;
+    outline: 1px solid #000;
     border-radius: 50%;
-    background: var(--vb-yellow);
+    background: #22a9e3;
     cursor: pointer;
-    /* margin-top: -3px; */
-    /*You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-    box-shadow: 0px 0px 20px 0px rgba(255, 229, 61, 0.50);
+    box-shadow: 0px 0px 20px 0px #ed3da1;
     transition: all 100ms ease-in;
     position: relative;
     z-index: 10;
 }
 
 .slider::-webkit-slider-thumb:hover {
-    outline: 2px solid var(--vb-yellow);
-    background-color: var(--dk-violet);
-    box-shadow: 0px 0px 25px 2px rgba(255, 229, 61, 0.80);
+    outline: 2px solid #ff0090;
+    background-color: #0e0c28;
+    box-shadow: 0px 0px 25px 2px #ff0090;
 }
 
 .slider::-moz-range-thumb {
@@ -204,75 +179,72 @@ button.copy-btn .copy-tooltip.active{
     width: 3.2rem;
     height: 3.2rem;
     border-radius: 50%;
-    background: var(--vb-yellow);
+    background: #ff0090;
     cursor: pointer;
-    /* margin-top: -3px; */
-    /*You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-    box-shadow: 0px 0px 20px 0px rgba(255, 229, 61, 0.50);
+    box-shadow: 0px 0px 20px 0px #ff0090;
     transition: all 100ms ease-in;
     position: relative;
     z-index: 10;
 }
 
 .slider::-moz-range-thumb:hover {
-    outline: 2px solid var(--vb-yellow);
-    background-color: var(--dk-violet);
-    box-shadow: 0px 0px 25px 2px rgba(255, 229, 61, 0.80);
+    outline: 2px solid #ff0090;
+    background-color: #0e0c28;
+    box-shadow: 0px 0px 25px 2px #ff0090;
 }
 
 /* checkboxes */
-.checkbox-container{
+.checkbox-container {
     display: flex;
     align-items: center;
     column-gap: 1.6rem;
     margin: 1.6rem 0;
 }
 
-.checkbox-container input[type="checkbox"]{
+.checkbox-container input[type="checkbox"] {
     appearance: none;
     width: 2rem;
     height: 2rem;
-    border: 0.1rem solid var(--vb-cyan);
+    border: 0.1rem solid #000000a9;
     border-radius: 0.5rem;
     cursor: pointer;
     position: relative;
 }
 
-.checkbox-container input[type="checkbox"]:checked{
-    background-color: var(--vb-cyan);
+.checkbox-container input[type="checkbox"]:checked {
+    background-color: #ff0f97;
 }
 
 /* tick symbol */
-.checkbox-container input[type="checkbox"]:checked::before{
-    /* \2713 */
-    content: '✔'; 
+.checkbox-container input[type="checkbox"]:checked::before {
+    content: '✔';
     position: absolute;
     top: -0.35rem;
     left: 50%;
     transform: translateX(-50%);
-    color: var(--dk-text);
+    color: #131313;
     font-size: 1.7rem;
     font-weight: 600;
 }
 
-.checkbox-container label{
+.checkbox-container label {
     font-size: 2rem;
     text-transform: capitalize;
     letter-spacing: 0.75px;
 }
 
 /* strength container */
-.strength-container{
+.strength-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.strength-container p{
+.strength-container p {
     font-size: 2.4rem;
 }
 
-.strength-container .indicator{
+.strength-container .indicator {
     width: 2.4rem;
     height: 2.4rem;
     border-radius: 50%;
@@ -280,36 +252,35 @@ button.copy-btn .copy-tooltip.active{
 }
 
 /* generate button */
-#generateButton{
+#generateButton {
     width: 100%;
     font-size: 2rem;
     font-weight: 600;
     padding: 1.6rem 0;
     border: none;
     border-radius: 1.2rem;
-    border-bottom: 0.5rem solid var(--vb-yellow);
-    color: var(--vb-yellow);
-    background-color: var(--vb-violet);
+    border-bottom: 0.5rem solid #ff0090;
+    color: #ff0090;
+    background-color: linear-gradient(to right bottom, #ed3da1, #ca6fde, #8e96ff, #43b3ff, #00c9ff, #00c9ff, #00c9ff, #00c9ff, #43b3ff, #8e96ff, #ca6fde, #ed3da1);
     text-transform: uppercase;
     letter-spacing: 0.1rem;
 }
 
-
 /* media queries */
-@media (max-width: 450px){
-    .app-name{
+@media (max-width: 450px) {
+    .app-name {
         font-size: 2.5rem;
     }
 
-    .display-container{
+    .display-container {
         padding: 2rem 2.5rem 1.5rem;
     }
 
-    input.display{
+    input.display {
         font-size: 2rem;
     }
 
-    .slider::-webkit-slider-thumb{
+    .slider::-webkit-slider-thumb {
         width: 2.7rem;
         height: 2.7rem;
     }
@@ -320,39 +291,39 @@ button.copy-btn .copy-tooltip.active{
     }
 
     .slider::-webkit-slider-thumb:hover {
-        box-shadow: 0px 0px 10px 4px rgba(255, 229, 61, 0.80);
+        box-shadow: 0px 0px 10px 4px #ff0090;
     }
 
     .slider::-moz-range-thumb:hover {
-        box-shadow: 0px 0px 10px 4px rgba(255, 229, 61, 0.80);
+        box-shadow: 0px 0px 10px 4px #ff0090;
     }
 }
 
-@media (max-width: 390px){
-    .display-container{
+@media (max-width: 390px) {
+    .display-container {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 
-    .input-container{
+    .input-container {
         padding-left: 2rem;
         padding-right: 2rem;
     }
 
-    input.display{
+    input.display {
         font-size: 1.6rem;
     }
 }
 
-@media (max-width: 350px){
-    .app-name{
+@media (max-width: 350px) {
+    .app-name {
         font-size: 2rem;
     }
     .checkbox-container label {
         font-size: 1.7rem;
     }
 
-    input.display{
+    input.display {
         font-size: 1.4rem;
     }
 
@@ -360,26 +331,25 @@ button.copy-btn .copy-tooltip.active{
         font-size: 1.7rem;
     }
 }
+
 /* footer */
 
 footer {
     color: transparent;
     padding: 20px;
-  }
-  
-  .footer-content {
+}
+
+.footer-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
-  }
-  
-  .footer-content p {
+}
+
+.footer-content p {
     margin: 0;
-  }
-  
-  .footer-icon {
+}
+
+.footer-icon {
     display: flex;
     gap: 10px;
-  }
-  
-
+}
